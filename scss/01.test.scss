@@ -4,19 +4,38 @@
 3. Mixin을 쓸 수 있다.
 */
 
-$txtColor: #232323;
-$wrapperWidth: 1100px;
+@import './inc/common';
 
 .wrapper {
 	max-width: $wrapperWidth;
 }
 
+
 .header-wrapper {
-	color: $txtColor;
-	margin: 0;
-	padding: 0;
-	>.logo {
-		width: 120px;
+	background-color: $headerBgColor;
+	color: $headerColor;
+	a {
+		&:link,
+		&:visited,
+		&:active,
+		&:hover {text-decoration: none; color: inherit;}
+	}
+	@include flex(space-between, center);
+	.logo {
+		padding: 1em;
+	}
+	.navi-wrap {
+		@include flex;
+		.navi {
+			a {
+				display: block;
+				padding: 1em;
+			}
+			&:hover {
+				background-color: $lightBgColor;
+				color: $headerBgColor;
+			}
+		}
 	}
 }
 
