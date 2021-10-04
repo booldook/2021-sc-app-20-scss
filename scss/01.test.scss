@@ -36,6 +36,20 @@
 				color: $headerBgColor;
 			}
 		}
+		@include SM {
+			display: none;
+		}
+	}
+	.navi-mobile {
+		cursor: pointer;
+		padding: 1em;
+		display: none;
+		@include SM {
+			display: block;
+		}
+		@include XS {
+			background-color: #5f5608;
+		}
 	}
 }
 
