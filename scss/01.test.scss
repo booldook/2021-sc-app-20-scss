@@ -1,0 +1,23 @@
+/* 
+1. 변수를 쓸 수 있다.
+2. Nested를 사용한다.
+3. Mixin을 쓸 수 있다.
+*/
+
+$txtColor: #232323;
+$wrapperWidth: 1100px;
+
+.wrapper {
+	max-width: $wrapperWidth;
+}
+
+.header-wrapper {
+	color: $txtColor;
+	margin: 0;
+	padding: 0;
+	>.logo {
+		width: 120px;
+	}
+}
+
+
